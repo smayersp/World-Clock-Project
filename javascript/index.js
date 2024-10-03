@@ -9,14 +9,14 @@ function updateTime() {
   losAngelesTimeElement.innerHTML = losAngelesTime.format(
     "h:mm:ss [<small>]A[</small>]"
   );
-  //Paris
-  let parisElement = document.querySelector("#paris");
-  let parisDateElement = parisElement.querySelector(".date");
-  let parisTimeElement = parisElement.querySelector(".time");
-  let parisTime = moment().tz("Europe/Paris");
+  //Rome
+  let romeElement = document.querySelector("#rome");
+  let romeDateElement = romeElement.querySelector(".date");
+  let romeTimeElement = romeElement.querySelector(".time");
+  let romeTime = moment().tz("Europe/Rome");
 
-  parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
-  parisTimeElement.innerHTML = parisTime.format("h:mm:ss [<small>]A[</small>]");
+  romeDateElement.innerHTML = romeTime.format("MMMM Do YYYY");
+  romeTimeElement.innerHTML = romeTime.format("h:mm:ss [<small>]A[</small>]");
 }
 
 updateTime();
