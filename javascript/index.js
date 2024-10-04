@@ -21,6 +21,18 @@ function updateTime() {
     romeDateElement.innerHTML = romeTime.format("MMMM Do YYYY");
     romeTimeElement.innerHTML = romeTime.format("h:mm:ss [<small>]A[</small>]");
   }
+  //Vancouver
+  let vancouverElement = document.querySelector("#vancouver");
+  if (vancouverElement) {
+    let vancouverDateElement = vancouverElement.querySelector(".date");
+    let vancouverTimeElement = vancouverElement.querySelector(".time");
+    let vancouverTime = moment().tz("America/Vancouver");
+
+    vancouverDateElement.innerHTML = vancouverTime.format("MMMM Do YYYY");
+    vancouverTimeElement.innerHTML = vancouverTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 function updateCity(event) {
